@@ -1,0 +1,454 @@
+<!--changed the color palette and styled buttons nad forgot to mention in last one i added visibilit js functions-->
+<!DOCTYPE html>
+<html lang="EN-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curiculum Vitae Emir Dadanović</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                color:white;
+                background-color: #23272a;
+
+            }
+            .container{
+                width:100%;
+                display: grid;
+                grid-template-columns:repeat( autofil 4,25%);
+                grid-template-rows: repeat(autofil 10,10%);
+                grid-row-gap:20px;
+                grid-column-gap:20px;
+               
+                
+            }
+            #profile-img{
+                width:30%;
+                height:25%;
+                border-radius: 50%;
+            }
+            #profile-img:hover{
+               transform: scale(1.5);
+               transition: transform .5s;
+               margin-left: 20px;
+                
+            }
+            button{
+              text-align: cetner;
+              position:relative;
+              left:40vw;
+              background-color:#33d6ff;
+              padding: 10px;
+              margin: -5px;;
+              border:none;
+              text-decoration: none;
+              font-size: 20px;
+            }
+            button:hover{
+            background-color: #7289da;
+            transform: scale(1.1);
+            z-index: 2;
+            transition:1s;
+            }
+            
+            
+            .header{
+                background-color:  #2C2F33;
+                
+                grid-column: 1/5;
+                padding:0%;
+                grid-column-gap:0;
+            }
+            h1{
+                text-align: center;
+
+            }
+           
+            span{
+                font-weight: bold;
+            }
+            
+            
+            .information{
+                visibility: hidden;
+                grid-column-start:1 ;
+                background-color: #2C2F33;
+                grid-row:2/10;
+                height:100%;
+               animation-name: animations;
+                animation-duration: 2s;
+                animation-iteration-count: 1;
+                animation-fill-mode: backwards;
+                
+}
+
+@keyframes animations {
+  from{
+    transform:translate(100%);
+    opacity:0;
+  }
+  to {
+    transform:translate(0%);
+    opacity:1;
+    animation-play-state:paused;
+  }
+  }
+                .expirence {
+                visibility: hidden;
+                background-color: #7289da;
+                animation-name: animation1;
+                animation-duration: 2s;
+                animation-iteration-count: 2;
+                animation-fill-mode: backwards;
+                }
+
+
+@keyframes animation1 {
+  from {
+    transform:translateY(100%);
+    opacity:0;
+  }
+  to {
+    transform:translate(0%);
+    opacity:1;
+    animation-play-state:paused;
+   
+  }
+  }
+  
+            
+            .skills{
+                background-color: #7289da;
+                visibility: hidden;
+                animation-name: animation2;
+                animation-duration: 2s;
+                animation-iteration-count:3;
+                animation-fill-mode: backwards;
+              }
+
+@keyframes animation2 {
+  from {
+    transform:translate(100%);
+    opacity:0;
+  }
+  to {
+    transform:translate(0%);
+    opacity:1;
+    animation-play-state:paused;;
+   
+  }
+  }
+                .language-skills{
+                visibility: hidden;
+               background-color:  #7289da;
+               animation-name: animation4;
+                animation-duration: 2s;
+                animation-iteration-count:4;
+                animation-fill-mode: backwards;
+
+                
+                
+
+            }
+            @keyframes animation4{
+  from {
+    transform:translate(100%);
+    opacity:0;
+  }
+  to {
+    transform:translate(0%);
+    opacity:1;
+    animation-delay: 1000s;
+   
+  }
+  }
+  .examples{
+                visibility: hidden;
+                grid-column:2/5 ;
+                justify-content: center;
+                background-color: #7289da;
+                animation-name: animation3;
+                 animation-duration: 2s;
+                animation-iteration-count: 3;
+                animation-fill-mode: backwards;
+            }
+
+@keyframes animation3{
+  from {
+    transform:translateY(100%);
+    opacity:0;
+  }
+  to {
+    transform:translateY(0%);
+    opacity:1;
+    
+   
+  }
+  }
+            #eximg{
+                width:20% ; 
+                height:20% ;
+                margin:1% 1% 1% 1%;
+              
+                }
+                #eximg:hover{
+                    transform: scale(1.3)  translateY(20%);
+                    transition:3s
+                    }
+                
+                #example-tite{
+                    text-align: center;
+                }
+                a:link, a:visited {
+               background-color: #23272a;
+                 color: white;
+                 padding:auto;
+                text-align: center;	
+                padding:10px 10px 10px 10px;
+                text-decoration: none;
+                border-radius: 30%;
+                }
+                a:hover, a:active {
+               background-color: #69b7c3;
+            }
+                 
+
+              @media  screen and (max-width: 800px){
+                .container{
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                  
+                    
+                    
+                }
+                
+                body{
+                    color:white;
+                }
+                button{
+                    text-align: center;
+                    background-color:#2C2F33;
+                }
+                
+               
+                
+            }
+                @media  screen and (max-width: 1000px){
+                .container{
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:center;
+                    
+                  
+                    
+                }
+                button{
+                  display: block;
+                  
+                }
+                #profile-img{
+                    width:20%;
+                    height:20%;
+                }
+                
+                    
+                }
+
+                #eximg{
+                width:30% ; 
+                height:70% ;
+            }
+            @media screen and ( max-width:800px) and (orientation:landscape){
+                .container{
+                    display:flex;
+                    flex-direction:row;
+                    justify-content: center;
+                    
+                }
+                #profile-img{
+                    
+                    width:20%;
+                    height:20%;
+                }
+                }
+                
+            </style>
+            <script>
+           function visibilityInf() {
+   document.getElementById("inf").style.visibility = "visible";
+
+}
+            function animationinf() {
+        document.getElementById("inf").className = "information";
+}
+function visibilityExp() {
+   document.getElementById("exp").style.visibility = "visible";
+
+}
+function animationexp() {
+        document.getElementById("exp").className = "expirence";
+}
+function visibilityskill() {
+   document.getElementById("skill").style.visibility = "visible";
+
+}
+function animationskill() {
+        document.getElementById("skill").className = "skills";
+}
+function visibilityexemp() {
+   document.getElementById("exemp").style.visibility = "visible";
+
+}
+function animationexemp() {
+        document.getElementById("exemp").className = "examples";
+}
+function visibilitylangskill() {
+   document.getElementById("langskil").style.visibility = "visible";
+
+}
+function animationlangskill() {
+        document.getElementById("langskil").className = "language-skills";
+}
+          
+          
+
+                </script>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+            <header>
+            
+              <h1>Curiculum Vitae Emir Dadanovic</h1>
+                <button  href="#inf"onclick="visibilityInf();animationinf();">Bio</button>
+                <button onclick="visibilityExp();animationexp();">Experience</button>
+                <button onclick="visibilityskill();animationskill();animationexemp();visibilityexemp();">Skills and Work</button>
+                <button onclick="visibilitylangskill();animationlangskill();">Language</button>
+              
+            </header>
+            </div>
+            <div class="information" id="inf">
+                <img  id="profile-img"src="https://p0.pikist.com/photos/585/361/face-cute-happy-man-male-person-smile-look-head.jpg" alt="smiling man cv picture placeholder">
+                <h3>Personal Inforamtion</h3>
+                <p><span>Country:</span> Bosnia and Herzegovina</p>
+                <p><span>City:</span>Tuzla</p>
+                <p><span>Adress:</span>Tomislava Ramljaka 21</p>
+                <p><span>Email Adress:</span>emirdadanovic94@gmail.com</p>
+                <p><span>Birth Date:</span> 04.05.1994</p>
+                <h3>About me</h3>
+                <p align="justify">First and foremost, I am easy going, agreeable person with great sense of responsability which are immportant personality traits for a someone to possess in any company. Furthermore, I am a hardworker, persistent and unusualy stubborn when faced with a problem or an obstacle. Admittedly I am a bit hasty, but just as hasty to admit and fix any errors of mine or others as I can relate. While I am not fully familiar with your stack I have no problem learning "technology in question" on my own while working simoltaniously and I would not be of any burden to other colleagues or assigned mentor/boss. To be perfectly honest my problem solving skills are average but my memory is exceptionally good. I have yet to record any meaningfull achievements as I have little experience in software development but given a chance I am certain I would not fail and I would prove myself. Here is a list of other skills besides programing language skills that could prove usefull at my position.I truly belive every now and then a company should hire yong people eager to learn. Lastly, salary is of no immportance to me because learning and getting experience is my priority.</p>
+         </div>
+                    <div class="expirence" id="exp">
+                        <h3>Jobs Applying to</h3>
+                        <ol>
+                            <li>Junior Backend Developer</li>
+                            <li>Junior Frontend Developer</li>
+                            <li>Internship</li>
+                        </ol>
+                        <h3>Working Experience</h3>
+                            <p>Unfortunately I do not have true working expirience in software/web development. What I have to show is some of freelance work I did on my own and while studying, on my Github page or Liknedin</p>
+                        <h3> Other Working Experince </h3>
+                        <ol>
+                            <li>System Administrator<br>
+                                At common affairs office of Tuzla Canton Government as an Full time Intern</li>
+                            <li>Technical SUpport<br>
+                                Summer Job in Germany For a comapny named TrueLogik(Stage Spotlight Repairing Setup and Cleaning)</li>
+                            <li>Plenty of other smaller summer jobs</li>
+                            
+                        </ol>
+                    
+                        </div>
+                       
+                            <div class="skills" id="skill">
+                                <h2>Applied Job Skills</h2>
+                                <h3>Basic Knowldge</h3>
+                                <ul>
+                                    <li>Node.js</li>
+                                    <li>Express.js</li>
+                                    <li>React.js</li>
+                                    <li>ASP.NET Core</li>
+                                    <li>MVC Web App Patern</li>
+                                    <li>ASP.NET Razor Pages</li>
+                                    <li>MS SQL</li>
+                                    <li>Git</li>
+                                        
+                                    </ul>
+                                    <h2>Advanced knowledge</h2>
+                                    <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Bootstrap</li>
+                                    <li>C#</li>
+                                    <li>Windows Forms</li>
+                                    <li>Linux OS</li>
+                                    <li>Great knowledge of PC and Server Architeture</li>
+                                    </ul>
+                                    </div>
+                                    
+                                    
+                                      <div class="language-skills" id="langskil">  
+                                    <h3>Language Skills</h3>
+                                    <table>
+                                        <tr>
+                                          <th>Language</th>
+                                          <th>Speech Production</th>
+                                          <th>Writing</th>
+                                          <th>Understanding</th>
+                                        </tr>
+                                        <tr>
+                                          <td>English</td>
+                                          <td>C1</td>
+                                          <td>B1</td>
+                                          <td>C2</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Bosnian</td>
+                                          <td>Maternal Language</td>
+                                          <td>Maternal Language</td>
+                                          <td>Maternal Language</td>
+                                        </tr>
+                                        <tr>
+                                            <td>German</td>
+                                            <td>A1</td>
+                                            <td>A2</td>
+                                            <td>B1</td>
+                                          </tr>
+                                      </table>
+                                      <div class="education">
+                                        <h3>Education</h3>
+                                        <ol>
+                                            <li><span>Highschool:</span>Gymnasium "Meša Selimović" Tuzla <br>Graduated with an A in June of 2014</li>
+                                            <li><span>College</span>Evropski Univerzitet "Kallos" Tuzla<br>Graduated on December 5th of 2020</li>
+                                            <li><span>Training:</span>Web development "Leftor"<br>Training took place in spring of 2018</li></li>
+                                            </ol>
+                                          </div>
+                                            
+                                            
+                                            <div class="social">
+                                              <h3>Hobbies</h3>
+                                            <ol>
+                                                <li>Football</li>
+                                                <li>Fitness</li>
+                                                <li>Movies and Video Games</li>
+                                            </div>
+                                            <div>
+                                            </ol>
+                                            <h3>Social</h3>
+                                            <a href="https://github.com/EmirDadanovic"> Github</a>
+                                            <a href="https://www.linkedin.com/in/emir-dadanovic-84656820a/">Linkedin</a>
+                                            </div>
+                                            
+                                            </div>
+                                            <div class="examples" id="exemp">
+                                                <h3 id="example-tite">Here Are some examples <br> of my work</h3>
+                                                <img id="eximg"src=" https://mobirise.com/assets52/images/temps-3.jpg" title="this is not my work is serves as placeholder since we cannot use links" alt="some website image">
+                                                <img id="eximg"src=" https://www.jimdo.com/static/fe444c59a0e9e7dbeb39df042894619c/cf497/website_3.png" title="this is not my work is serves as placeholder since we cannot use links" alt="some website image">
+                                                <img id="eximg"src=" https://static.hsstatic.net/website-grader-ui/ex/wsg_screenshot_en.png" title="this is not my work is serves as placeholder since we cannot use links" alt="some website image"> 
+                                                   
+                                            </div>
+                                      </div>
+                                      
+                                      
+         </body>
+    </html>
